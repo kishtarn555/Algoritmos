@@ -9,7 +9,7 @@ void tarjan(int cur, int prev, vector<vector<int> > &_scc,vector<int> * _adj, st
             if (inStack[ni])
                 hi[cur]=min(hi[cur], lo[ni]);
         } else {
-            tarjan(ni, cur,_scc,_adj,st,lo,hi,st);
+            tarjan(ni, cur,_scc,_adj,st,lo,hi,dt);
             hi[cur]=min(hi[cur], hi[ni]);
         }
     }
